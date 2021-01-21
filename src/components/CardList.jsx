@@ -8,6 +8,16 @@ const CardList = (props) => {
   const [monsters, setMonsters] = useState([])
 
   useEffect(() => {
+    // fetch(`https://jsonplaceholder.typicode.com/users`)
+    // .then(response => {
+    //   return response.json()
+    //   console.log(response)
+    // })
+    // .then(data => {
+    //   setMonsters(data)
+    //   console.log(data)
+    // })
+
    axios.get(`https://jsonplaceholder.typicode.com/users`)
    .then(response => {console.log(response)
     setMonsters(response.data)
